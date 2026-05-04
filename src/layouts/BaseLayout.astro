@@ -2,41 +2,46 @@
 import "../styles/global.css";
 import "aos/dist/aos.css";
 
-const { title = "Ánima" } = Astro.props;
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "Ánima Diseño & Comunicación — Branding estratégico", 
+  description = "Estudio de branding consciente para profesionales del bienestar, terapeutas y emprendedoras. Construimos marcas con estructura, coherencia y propósito." 
+} = Astro.props;
 ---
 
-<html lang="es">
+<html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
 
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <!-- Fonts: Poppins para estructura y Lato para cercanía -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-    <title>Ánima Diseño & Comunicación</title>
-    <meta
-      name="description"
-      content="Estudio de branding consciente para profesionales del bienestar, terapeutas y emprendedoras."
-    />
+    <title>{title}</title>
   </head>
 
-  <body class="bg-[#E9E2D0] text-[#373A36] font-[Lato]">
+  <body class="bg-[#E9E2D0] text-[#373A36] font-['Lato'] antialiased selection:bg-[#91A8D0] selection:text-white">
+
     <slot />
-    <!-- AOS INIT -->
+
+    <!-- AOS: Animaciones sutiles para reforzar la fluidez -->
     <script>
       import AOS from "aos";
-
       window.addEventListener("DOMContentLoaded", () => {
         AOS.init({
-          duration: 700,
-          easing: "ease-out",
+          duration: 800,
           once: true,
-          offset: 120,
+          easing: "ease-out",
         });
       });
     </script>
+
   </body>
 </html>
