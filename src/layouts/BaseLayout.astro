@@ -1,0 +1,42 @@
+---
+import "../styles/global.css";
+import "aos/dist/aos.css";
+
+const { title = "Ánima" } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Ánima Diseño & Comunicación</title>
+    <meta
+      name="description"
+      content="Estudio de branding consciente para profesionales del bienestar, terapeutas y emprendedoras."
+    />
+  </head>
+
+  <body class="bg-[#E9E2D0] text-[#373A36] font-[Lato]">
+    <slot />
+    <!-- AOS INIT -->
+    <script>
+      import AOS from "aos";
+
+      window.addEventListener("DOMContentLoaded", () => {
+        AOS.init({
+          duration: 700,
+          easing: "ease-out",
+          once: true,
+          offset: 120,
+        });
+      });
+    </script>
+  </body>
+</html>
