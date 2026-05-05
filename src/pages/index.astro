@@ -1,25 +1,10 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
 <BaseLayout>
-  <!-- NAVBAR: Transparencia sutil y desenfoque -->
-  <nav
-    class="fixed top-0 w-full z-50 bg-[#E9E2D0]/80 backdrop-blur-md border-b border-black/5"
-  >
-    <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-      <div class="font-['Poppins'] font-bold text-xl tracking-tight">Ánima</div>
-      <div
-        class="hidden md:flex gap-8 text-sm uppercase tracking-widest font-medium"
-      >
-        <a href="#servicios" class="hover:text-[#91A8D0] transition"
-          >Servicios</a
-        >
-        <a href="#proceso" class="hover:text-[#91A8D0] transition">Proceso</a>
-        <a href="#contacto" class="hover:text-[#91A8D0] transition">Contacto</a>
-      </div>
-    </div>
-  </nav>
+  <Navbar />
 
   <!-- HERO: Enfoque en el público ideal -->
   <section
@@ -282,14 +267,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           Una forma diferente de construir marcas.
         </h4>
         <p class="text-sm text-[#373A36]/80 max-w-2xl mx-auto leading-relaxed">
-          Ánima nace de la necesidad de hacer las cosas de otra manera. De
-          construir marcas con estructura y sentido, en un mercado saturado de
-          fórmulas rápidas y promesas sin sustento. Cada proyecto es un proceso
-          basado en la escucha, la estrategia y la coherencia. No trabajamos con
-          recetas. Trabajamos con sistemas. No diseñamos apariencias.
-          Construimos sistemas de identidad que reflejan, con precisión, lo que
-          cada marca ya es — y que pueden sostenerse y crecer en el tiempo sin
-          perder coherencia.
+          Ánima nace de la necesidad de hacer las cosas de otra manera:
+          construyendo marcas con estructura y sentido en un mercado saturado de
+          fórmulas rápidas. No trabajamos con recetas, trabajamos con sistemas.
+          No diseñamos apariencias; construimos identidades que reflejan con
+          precisión la esencia de cada proyecto, permitiendo que crezcan en el
+          tiempo sin perder su coherencia.
         </p>
       </div>
 
