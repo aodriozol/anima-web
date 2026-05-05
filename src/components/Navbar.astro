@@ -1,11 +1,59 @@
-<nav class="flex justify-between items-center p-6 max-w-6xl mx-auto">
-  <div class="font-semibold text-lg">Ánima</div>
+---
+---
 
-  <div class="flex gap-6 text-sm">
-    <a href="/">Inicio</a>
-    <a href="/sobre-anima">Sobre</a>
-    <a href="/proceso">Proceso</a>
-    <a href="/servicios">Servicios</a>
-    <a href="/contacto">Contacto</a>
+<header class="fixed top-0 left-0 w-full bg-[#E9E2D0]/80 backdrop-blur-md z-50">
+
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <!-- Logo -->
+    <a href="/" class="font-[Poppins] text-[18px] tracking-wide">
+      Ánima
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex gap-8 text-sm font-[Lato]">
+      <a href="/" class="hover:opacity-70 transition">Inicio</a>
+      <a href="/sobre-anima" class="hover:opacity-70 transition">Sobre</a>
+      <a href="/proceso" class="hover:opacity-70 transition">Proceso</a>
+      <a href="/servicios" class="hover:opacity-70 transition">Servicios</a>
+      <a href="/contacto" class="hover:opacity-70 transition font-medium">
+        Contacto
+      </a>
+    </nav>
+
+    <!-- Mobile button -->
+    <button id="menu-btn" class="md:hidden" aria-label="Abrir menú">
+      <div class="space-y-1">
+        <span class="block w-5 h-[1px] bg-[#373A36]"></span>
+        <span class="block w-5 h-[1px] bg-[#373A36]"></span>
+        <span class="block w-5 h-[1px] bg-[#373A36]"></span>
+      </div>
+    </button>
+
   </div>
-</nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden flex flex-col items-center gap-6 pb-6 text-sm font-[Lato]">
+
+    <a href="/" class="hover:opacity-70 transition">Inicio</a>
+    <a href="/sobre-anima" class="hover:opacity-70 transition">Sobre</a>
+    <a href="/proceso" class="hover:opacity-70 transition">Proceso</a>
+    <a href="/servicios" class="hover:opacity-70 transition">Servicios</a>
+    <a href="/contacto" class="hover:opacity-70 transition">Contacto</a>
+
+  </div>
+
+</header>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+  });
+</script>
