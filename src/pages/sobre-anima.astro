@@ -11,38 +11,48 @@ import Footer from '../components/Footer.astro';
   <section class="pt-32 pb-24 px-6 bg-[#E9E2D0]/30">
     <div class="max-w-2xl mx-auto text-center">
 
-      <h1 class="font-[Poppins] text-[40px] md:text-[48px] font-semibold leading-tight mb-6">
-        Ánima nació de una convicción,
-        <br class="hidden md:block"> no de una tendencia.
+      <p class="font-['Lato'] text-sm tracking-wide text-[#373A36]/60 mb-4">
+        Sobre Ánima
+      </p>
+
+      <h1 class="font-['Poppins'] text-4xl md:text-5xl font-semibold leading-tight mb-6">
+        No es un estudio de marketing.
+        <br class="hidden md:block"> 
+        Es una forma distinta de construir marcas.
       </h1>
 
-      <p class="font-[Lato] text-[16.5px] text-[#373A36]/70 leading-relaxed max-w-xl mx-auto">
-        Esta página cuenta el origen del estudio, la postura que lo sostiene
-        y quién está detrás de cada proyecto.
+      <p class="font-['Lato'] text-lg text-[#373A36]/70 leading-relaxed max-w-xl mx-auto">
+        Ánima nace desde una convicción clara:
+        las marcas no necesitan más ruido, necesitan más estructura.
       </p>
 
     </div>
   </section>
 
   <!-- ORIGEN + CAMINO -->
-  <section class="py-20 px-6 bg-white">
-    <div class="max-w-xl mx-auto space-y-16 font-[Lato] text-[16.5px] leading-relaxed text-[#373A36]/80">
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-3xl mx-auto space-y-20 text-[#373A36]/80 leading-relaxed font-['Lato']">
 
       <!-- ORIGEN -->
-      <div class="space-y-5">
-        <h2 class="font-[Poppins] text-[22px] font-medium text-[#373A36]">
+      <div>
+        <h2 class="font-['Poppins'] text-2xl font-semibold mb-6 text-[#373A36]">
           Por qué existe Ánima.
         </h2>
 
-        <p>El mercado del diseño está lleno de promesas.</p>
+        <p class="mb-4">El mercado del diseño está lleno de promesas.</p>
 
-        <p>
+        <p class="mb-4">
           Promesas de resultados rápidos.  
           De fórmulas que funcionan para todos.
         </p>
 
-        <p class="text-[#373A36] font-medium">
+        <p class="mb-4 font-medium text-[#373A36]">
           Ánima nace como respuesta a esa saturación.
+        </p>
+
+        <p class="mb-4">
+          No para hacer más de lo mismo,  
+          sino para trabajar desde otro lugar.
         </p>
 
         <p>
@@ -52,20 +62,24 @@ import Footer from '../components/Footer.astro';
       </div>
 
       <!-- CAMINO -->
-      <div class="space-y-5">
-        <h2 class="font-[Poppins] text-[22px] font-medium text-[#373A36]">
+      <div>
+        <h2 class="font-['Poppins'] text-2xl font-semibold mb-6 text-[#373A36]">
           Un camino de coherencia.
         </h2>
 
-        <p>Ánima no apareció de la nada.</p>
+        <p class="mb-4">Ánima no apareció de la nada.</p>
 
-        <p>
+        <p class="mb-4">
           Fue el resultado de un proceso real de claridad:
           definir qué tipo de trabajo tenía sentido hacer,
           con quién y desde qué postura.
         </p>
 
-        <p class="text-[#373A36] font-medium">
+        <p class="mb-4 font-medium text-[#373A36]">
+          Primero entender. Después construir.
+        </p>
+
+        <p class="font-medium text-[#373A36]">
           No se puede pedir coherencia sin practicarla.
         </p>
       </div>
@@ -74,36 +88,25 @@ import Footer from '../components/Footer.astro';
   </section>
 
   <!-- PAULA -->
-  <section class="py-24 px-6 bg-[#E9E2D0]/40">
+  <section class="py-24 px-6 bg-[#E9E2D0]/50">
     <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 
-      <div class="grid md:grid-cols-2 gap-16 items-center">
-
-        <!-- Imagen -->
-        <div class="order-1 md:order-2" data-aos="fade-left">
-          <img 
-            src="/images/paula-blanco.jpg" 
-            alt="Paula Blanco"
-            class="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition duration-700"
-          />
-
-          <p class="mt-4 font-[Lato] text-xs italic text-[#A3B5A6]">
+        <div class="order-1 md:order-2">
+          <img src="/images/paula-blanco.jpg" alt="Paula Blanco" class="grayscale hover:grayscale-0 transition-all duration-700 w-full aspect-[4/5] object-cover" />
+          <p class="mt-4 font-['Lato'] italic text-xs text-[#A3B5A6]">
             Paula Blanco — Fundadora, Ánima Diseño & Comunicación.
           </p>
         </div>
 
-        <!-- Texto -->
-        <div class="order-2 md:order-1 max-w-md" data-aos="fade-right">
-
-          <h2 class="font-[Poppins] text-[26px] font-medium mb-6">
+        <div class="order-2 md:order-1">
+          <h2 class="font-['Poppins'] text-3xl font-semibold mb-8">
             Paula Blanco
           </h2>
 
-          <div class="space-y-5 font-[Lato] text-[16px] leading-relaxed text-[#373A36]/85">
-
+          <div class="space-y-6 text-[#373A36]/90 text-sm leading-relaxed font-['Lato']">
             <p>
-              Soy diseñadora y estratega de marca.  
-              Llevo más de una década trabajando en la construcción de identidades.
+              Soy diseñadora y estratega de marca. Llevo más de una década trabajando en la construcción de identidades.
             </p>
 
             <p>
@@ -112,82 +115,50 @@ import Footer from '../components/Footer.astro';
             </p>
 
             <p class="font-medium text-[#373A36]">
-              Nunca creí en ese modelo.
+              Nunca me terminó de cerrar.
             </p>
 
             <p>
-              Ánima es la materialización de esa convicción:
-              primero la esencia, después la estructura,
-              luego el sistema.
+              Ánima es la materialización de esa búsqueda:
+              hacer branding desde la esencia, con estructura y criterio.
             </p>
-
           </div>
-
         </div>
 
       </div>
-
     </div>
   </section>
 
   <!-- MANIFIESTO -->
-  <section class="py-28 px-6 bg-[#373A36] text-[#E9E2D0]">
-    <div class="max-w-xl mx-auto space-y-5 font-[Lato] text-[16.5px] leading-relaxed">
+  <section class="py-32 px-6 bg-[#A3B5A6] text-white">
+    <div class="max-w-3xl mx-auto text-center">
 
-      <h2 class="font-[Poppins] text-[22px] font-medium mb-6">
+      <h2 class="font-['Poppins'] text-3xl font-semibold mb-12">
         Lo que creemos.
       </h2>
 
-      <p>El marketing no es neutro.</p>
+      <div class="space-y-8 font-['Lato'] text-lg">
+        <p>El marketing no es neutro.</p>
+        <p>El diseño no es decoración.</p>
+        <p class="font-medium">
+          La comunicación es una responsabilidad.
+        </p>
 
-      <p>El diseño no es decoración.</p>
+        <p class="pt-6 text-white/80 text-sm">
+          No trabajamos con urgencia artificial.  
+          No aplicamos fórmulas.
+        </p>
 
-      <p class="font-medium">
-        La comunicación es una responsabilidad.
-      </p>
-
-      <p class="pt-4 text-[#E9E2D0]/70">
-        No trabajamos con urgencia artificial.  
-        No aplicamos fórmulas.
-      </p>
-
-      <p class="font-medium">
-        Trabajamos desde la escucha.  
-        Diseñamos con criterio.  
-        Comunicamos con verdad.
-      </p>
-
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section id="contacto" class="py-20 px-6 bg-white">
-    <div class="max-w-xl mx-auto text-center space-y-8">
-
-      <h2 class="font-[Poppins] text-[20px] font-medium leading-relaxed">
-        Si esto resuena con lo que buscás, podemos conversarlo.
-      </h2>
-
-      <div class="flex flex-col md:flex-row justify-center gap-4">
-
-        <a 
-          href="mailto:hola@animadiseno.com"
-          class="bg-[#373A36] text-white px-6 py-3 text-sm hover:opacity-80 transition"
-        >
-          Escribinos
-        </a>
-
-        <a 
-          href="/servicios"
-          class="text-[#373A36] underline text-sm"
-        >
-          Conocer servicios
-        </a>
-
+        <p class="font-medium">
+          Trabajamos desde la escucha.  
+          Diseñamos con criterio.  
+          Comunicamos con verdad.
+        </p>
       </div>
 
     </div>
   </section>
+
 
   <Footer />
 </BaseLayout>
