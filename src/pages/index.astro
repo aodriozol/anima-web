@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <BaseLayout>
@@ -295,26 +296,7 @@ import Navbar from "../components/Navbar.astro";
     </div>
   </section>
 
-  <!-- FOOTER CONCEPTUAL -->
-  <footer id="contacto" class="pt-32 pb-16 px-6 bg-[#373A36] text-[#E9E2D0]">
-    <div class="max-w-6xl mx-auto text-center">
-      <h2 class="font-['Poppins'] text-3xl font-bold mb-12">
-        ¿Conversamos sobre tu proyecto?
-      </h2>
-      <a
-        href="mailto:hola.animaestudio@gmail.com"
-        class="text-2xl md:text-4xl font-light hover:text-[#91A8D0] transition block mb-16"
-      >
-        hola.animaestudio@gmail.com
-      </a>
+  <!-- FOOTER  -->
+  <Footer />
 
-      <div
-        class="grid md:grid-cols-3 gap-8 pt-16 border-t border-white/10 text-xs uppercase tracking-[0.3em] opacity-60"
-      >
-        <p>Estructura con alma</p>
-        <p>Estrategia con sensibilidad</p>
-        <p>@animaestudio.creativo</p>
-      </div>
-    </div>
-  </footer>
 </BaseLayout>
