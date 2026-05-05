@@ -6,96 +6,188 @@ import Footer from '../components/Footer.astro';
 
 <BaseLayout title="Sobre Ánima — Branding Consciente">
   <Navbar />
-  <!-- Bloque 1: HERO -->
-  <section class="pt-32 pb-20 px-6 bg-[#E9E2D0]/30">
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="font-['Poppins'] text-4xl md:text-5xl font-bold mb-6 leading-tight">
-        Ánima nació de una convicción, <br class="hidden md:block"> no de una tendencia.
+
+  <!-- HERO -->
+  <section class="pt-32 pb-24 px-6 bg-[#E9E2D0]/30">
+    <div class="max-w-2xl mx-auto text-center">
+
+      <h1 class="font-[Poppins] text-[40px] md:text-[48px] font-semibold leading-tight mb-6">
+        Ánima nació de una convicción,
+        <br class="hidden md:block"> no de una tendencia.
       </h1>
-      <p class="font-['Lato'] text-lg italic text-[#373A36]/70 max-w-2xl mx-auto">
-        Esta página cuenta el origen del estudio, la postura que lo sostiene y quién está detrás de cada proyecto.
+
+      <p class="font-[Lato] text-[16.5px] text-[#373A36]/70 leading-relaxed max-w-xl mx-auto">
+        Esta página cuenta el origen del estudio, la postura que lo sostiene
+        y quién está detrás de cada proyecto.
       </p>
+
     </div>
   </section>
 
-  <!-- Bloque 2 y 3: EL ORIGEN Y EL CAMINO -->
-  <section class="py-24 px-6 bg-white">
-    <div class="max-w-3xl mx-auto space-y-20 text-[#373A36]/80 leading-relaxed">
-      <div>
-        <h2 class="font-['Poppins'] text-2xl font-bold mb-6 text-[#373A36]">Por qué existe Ánima.</h2>
-        <p class="mb-4">
-          El mercado del diseño y la comunicación está lleno de promesas de resultados rápidos y fórmulas que funcionan para todos. Paula las conoce bien — las vio repetirse durante años, aplicadas sin criterio real ni interés genuino.
-        </p>
+  <!-- ORIGEN + CAMINO -->
+  <section class="py-20 px-6 bg-white">
+    <div class="max-w-xl mx-auto space-y-16 font-[Lato] text-[16.5px] leading-relaxed text-[#373A36]/80">
+
+      <!-- ORIGEN -->
+      <div class="space-y-5">
+        <h2 class="font-[Poppins] text-[22px] font-medium text-[#373A36]">
+          Por qué existe Ánima.
+        </h2>
+
+        <p>El mercado del diseño está lleno de promesas.</p>
+
         <p>
-          Ánima nació como respuesta a esa saturación. El nombre no es casual: Ánima significa alma. Y es exactamente eso lo que el estudio elige comunicar: el alma de cada marca.
+          Promesas de resultados rápidos.  
+          De fórmulas que funcionan para todos.
+        </p>
+
+        <p class="text-[#373A36] font-medium">
+          Ánima nace como respuesta a esa saturación.
+        </p>
+
+        <p>
+          El nombre no es casual. Ánima significa alma.  
+          Y es exactamente eso lo que el estudio elige comunicar.
         </p>
       </div>
 
-      <div>
-        <h2 class="font-['Poppins'] text-2xl font-bold mb-6 text-[#373A36]">Un camino de coherencia.</h2>
+      <!-- CAMINO -->
+      <div class="space-y-5">
+        <h2 class="font-[Poppins] text-[22px] font-medium text-[#373A36]">
+          Un camino de coherencia.
+        </h2>
+
+        <p>Ánima no apareció de la nada.</p>
+
         <p>
-          Antes de acompañar a otras marcas a encontrar su esencia, Ánima encontró la propia. No se puede pedir coherencia sin practicarla. Este estudio es el resultado de definir qué tipo de trabajo tenía sentido hacer y desde qué postura.
+          Fue el resultado de un proceso real de claridad:
+          definir qué tipo de trabajo tenía sentido hacer,
+          con quién y desde qué postura.
+        </p>
+
+        <p class="text-[#373A36] font-medium">
+          No se puede pedir coherencia sin practicarla.
         </p>
       </div>
+
     </div>
   </section>
 
-  <!-- Bloque 5: PAULA BLANCO (Fundadora) -->
-  <section class="py-24 px-6 bg-[#E9E2D0]/50">
+  <!-- PAULA -->
+  <section class="py-24 px-6 bg-[#E9E2D0]/40">
     <div class="max-w-5xl mx-auto">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <!-- Imagen de Paula -->
+
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+
+        <!-- Imagen -->
         <div class="order-1 md:order-2" data-aos="fade-left">
-          <div class="relative">
-            <!-- Aquí iría la foto de WhatsApp por ahora -->
-            <img src="/images/paula-blanco.jpg" alt="Paula Blanco" class="grayscale hover:grayscale-0 transition-all duration-700 w-full aspect-[4/5] object-cover rounded-sm shadow-sm" />
-            <p class="mt-4 font-['Lato'] italic text-xs tracking-wide text-[#A3B5A6]">
-              Paula Blanco — Fundadora, Ánima Diseño & Comunicación.
-            </p>
-          </div>
+          <img 
+            src="/images/paula-blanco.jpg" 
+            alt="Paula Blanco"
+            class="w-full aspect-[4/5] object-cover grayscale hover:grayscale-0 transition duration-700"
+          />
+
+          <p class="mt-4 font-[Lato] text-xs italic text-[#A3B5A6]">
+            Paula Blanco — Fundadora, Ánima Diseño & Comunicación.
+          </p>
         </div>
 
-        <!-- Texto de Paula (Primera Persona) -->
-        <div class="order-2 md:order-1" data-aos="fade-right">
-          <h2 class="font-['Poppins'] text-3xl font-bold mb-8">Paula Blanco</h2>
-          <div class="space-y-6 text-[#373A36]/90 text-sm leading-relaxed">
+        <!-- Texto -->
+        <div class="order-2 md:order-1 max-w-md" data-aos="fade-right">
+
+          <h2 class="font-[Poppins] text-[26px] font-medium mb-6">
+            Paula Blanco
+          </h2>
+
+          <div class="space-y-5 font-[Lato] text-[16px] leading-relaxed text-[#373A36]/85">
+
             <p>
-              Soy diseñadora y estratega de marca. Llevo más de una década trabajando en la construcción de identidades. En ese recorrido vi repetirse el mismo patrón: marcas construidas desde la superficie.
+              Soy diseñadora y estratega de marca.  
+              Llevo más de una década trabajando en la construcción de identidades.
             </p>
+
             <p>
-              Ánima es la materialización de mi convicción de que el branding puede hacerse de otra manera: primero la esencia, después la estructura, luego el sistema. Sin atajos ni fórmulas mágicas.
+              En ese recorrido vi repetirse el mismo patrón:
+              marcas construidas desde la superficie.
             </p>
+
+            <p class="font-medium text-[#373A36]">
+              Nunca creí en ese modelo.
+            </p>
+
+            <p>
+              Ánima es la materialización de esa convicción:
+              primero la esencia, después la estructura,
+              luego el sistema.
+            </p>
+
           </div>
+
         </div>
+
       </div>
+
     </div>
   </section>
 
-  <!-- Bloque 6: LO QUE CREEMOS (Manifiesto) -->
-  <section class="py-32 px-6 bg-[#A3B5A6] text-white">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="font-['Poppins'] text-3xl font-bold mb-12">Lo que creemos.</h2>
-      <div class="space-y-8 font-['Lato'] text-lg">
-        <p>"Creemos que el marketing no es neutro. Que el diseño no es decoración. Que la comunicación es una responsabilidad."</p>
-        <p>"No trabajamos con urgencia artificial. Trabajamos desde la escucha. Construimos desde la esencia. Diseñamos con criterio."</p>
-        <p class="pt-8 text-white/80 text-sm tracking-widest uppercase font-bold">
-          Eso es hacer las cosas bien.
-        </p>
-      </div>
+  <!-- MANIFIESTO -->
+  <section class="py-28 px-6 bg-[#373A36] text-[#E9E2D0]">
+    <div class="max-w-xl mx-auto space-y-5 font-[Lato] text-[16.5px] leading-relaxed">
+
+      <h2 class="font-[Poppins] text-[22px] font-medium mb-6">
+        Lo que creemos.
+      </h2>
+
+      <p>El marketing no es neutro.</p>
+
+      <p>El diseño no es decoración.</p>
+
+      <p class="font-medium">
+        La comunicación es una responsabilidad.
+      </p>
+
+      <p class="pt-4 text-[#E9E2D0]/70">
+        No trabajamos con urgencia artificial.  
+        No aplicamos fórmulas.
+      </p>
+
+      <p class="font-medium">
+        Trabajamos desde la escucha.  
+        Diseñamos con criterio.  
+        Comunicamos con verdad.
+      </p>
+
     </div>
   </section>
 
-  <!-- Bloque 7: CTA FINAL -->
-  <section id="contacto" class="py-24 px-6 bg-white text-center">
-    <h2 class="font-['Poppins'] text-2xl font-bold mb-8">Si esto resuena con lo que buscás, conversémoslo.</h2>
-    <div class="flex flex-col md:flex-row justify-center gap-6">
-      <a href="mailto:hola@animadiseno.com" class="bg-[#373A36] text-white px-8 py-4 rounded-full font-bold hover:bg-[#A3B5A6] transition">
-        Escribinos
-      </a>
-      <a href="/servicios" class="border border-[#373A36] text-[#373A36] px-8 py-4 rounded-full font-bold hover:bg-[#E9E2D0] transition">
-        Conocer los servicios
-      </a>
+  <!-- CTA -->
+  <section id="contacto" class="py-20 px-6 bg-white">
+    <div class="max-w-xl mx-auto text-center space-y-8">
+
+      <h2 class="font-[Poppins] text-[20px] font-medium leading-relaxed">
+        Si esto resuena con lo que buscás, podemos conversarlo.
+      </h2>
+
+      <div class="flex flex-col md:flex-row justify-center gap-4">
+
+        <a 
+          href="mailto:hola@animadiseno.com"
+          class="bg-[#373A36] text-white px-6 py-3 text-sm hover:opacity-80 transition"
+        >
+          Escribinos
+        </a>
+
+        <a 
+          href="/servicios"
+          class="text-[#373A36] underline text-sm"
+        >
+          Conocer servicios
+        </a>
+
+      </div>
+
     </div>
   </section>
+
   <Footer />
 </BaseLayout>
