@@ -6,10 +6,72 @@ import Footer from "../components/Footer.astro";
 
 <BaseLayout title="Contacto">
   <Navbar />
+  <section class="pt-32 pb-24 px-6 bg-[#E9E2D0]/20 min-h-screen">
+    <div class="max-w-2xl mx-auto">
+      
+      <!-- Encabezado -->
+      <div class="text-center mb-16" data-aos="fade-up">
+        <h1 class="font-['Poppins'] text-4xl font-bold mb-6 text-[#373A36]">Comencemos una conversación.</h1>
+        <p class="font-['Lato'] text-[#373A36]/70 leading-relaxed">
+          No hace falta tenerlo todo claro antes de escribir. Contanos brevemente sobre tu proyecto y en qué momento sentís que está tu marca.
+        </p>
+      </div>
 
-  <main class="py-20 text-center">
-    <h1 class="text-3xl font-semibold">Contacto</h1>
-  </main>
+      <!-- Formulario -->
+      <form action="https://formspree.io/f/tu-id" method="POST" class="space-y-8 bg-white p-10 shadow-sm rounded-sm border border-[#A3B5A6]/10">
+        
+        <div class="space-y-2">
+          <label for="nombre" class="block font-['Poppins'] text-sm font-bold uppercase tracking-widest text-[#A3B5A6]">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required 
+            class="w-full border-b border-[#373A36]/20 py-3 focus:border-[#A3B5A6] outline-none transition-colors font-['Lato']" 
+            placeholder="Tu nombre o el de tu marca" />
+        </div>
+
+        <div class="space-y-2">
+          <label for="email" class="block font-['Poppins'] text-sm font-bold uppercase tracking-widest text-[#A3B5A6]">Email</label>
+          <input type="email" id="email" name="email" required 
+            class="w-full border-b border-[#373A36]/20 py-3 focus:border-[#A3B5A6] outline-none transition-colors font-['Lato']" 
+            placeholder="hola@tuproyecto.com" />
+        </div>
+
+        <div class="space-y-2">
+          <label for="momento" class="block font-['Poppins'] text-sm font-bold uppercase tracking-widest text-[#A3B5A6]">¿En qué momento está tu marca?</label>
+          <select id="momento" name="momento" 
+            class="w-full border-b border-[#373A36]/20 py-3 bg-transparent focus:border-[#A3B5A6] outline-none transition-colors font-['Lato'] text-[#373A36]/70">
+            <option value="inicio">Es un proyecto nuevo (Branding Esencial)</option>
+            <option value="rediseño">Ya existe, pero necesita claridad (Auditoría)</option>
+            <option value="crecimiento">Busco coherencia y gestión (Dirección Estratégica)</option>
+            <option value="otro">Todavía no estoy segura</option>
+          </select>
+        </div>
+
+        <div class="space-y-2">
+          <label for="mensaje" class="block font-['Poppins'] text-sm font-bold uppercase tracking-widest text-[#A3B5A6]">Tu mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required
+            class="w-full border-b border-[#373A36]/20 py-3 focus:border-[#A3B5A6] outline-none transition-colors font-['Lato'] resize-none" 
+            placeholder="Contanos lo que sientas necesario..."></textarea>
+        </div>
+
+        <div class="pt-6">
+          <button type="submit" 
+            class="w-full bg-[#373A36] text-white font-['Poppins'] font-bold py-4 rounded-full hover:bg-[#A3B5A6] transition-all duration-300 tracking-widest uppercase text-sm">
+            Enviar Mensaje
+          </button>
+        </div>
+
+      </form>
+
+      <div class="mt-12 text-center text-sm text-[#373A36]/50 font-['Lato']">
+        <p>También podés escribirnos directamente a <a href="mailto:hola@animadiseno.com" class="underline hover:text-[#A3B5A6]">hola@animadiseno.com</a></p>
+      </div>
+
+    </div>
+  </section>
+
 
   <Footer />
 </BaseLayout>
+
+
+
+
