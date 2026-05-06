@@ -4,12 +4,22 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<BaseLayout title="Contacto">
+<BaseLayout title="Contacto — Ánima">
   <Navbar />
+  
+  <style>
+    /* Forzamos la visibilidad del error cuando el form tiene la clase 'submitted' */
+    .submitted input:invalid ~ .error-msg,
+    .submitted select:invalid ~ .error-msg,
+    .submitted textarea:invalid ~ .error-msg {
+      display: block !important;
+      opacity: 1 !important;
+    }
+  </style>
+
   <section class="pt-32 pb-24 px-6 bg-[#E9E2D0]/20 min-h-screen">
     <div class="max-w-2xl mx-auto">
       
-      <!-- Encabezado -->
       <div class="text-center mb-16" data-aos="fade-up">
         <h1 class="font-['Poppins'] text-4xl font-bold mb-6 text-[#373A36]">Comencemos una conversación.</h1>
         <p class="font-['Lato'] text-[#373A36]/70 leading-relaxed">
@@ -17,61 +27,140 @@ import Footer from "../components/Footer.astro";
         </p>
       </div>
 
-      <!-- Formulario -->
-      <form action="https://formspree.io/f/tu-id" method="POST" class="space-y-8 bg-white p-10 shadow-sm rounded-sm border border-[#A3B5A6]/10">
+      <form 
+        id="contact-form"
+        action="https://formspree.io/f/maqvbwod" 
+        method="POST" 
+        novalidate
+        class="space-y-12 bg-white p-10 shadow-sm rounded-sm border border-[#A3B5A6]/10"
+      >
         
-        <div class="space-y-2">
-          <label for="nombre" class="block font-['Poppins'] text-sm font-bold uppercase tracking-widest text-[#A3B5A6]">Nombre</label>
+        <div class="relative flex flex-col">
+          <label for="nombre" class="block font-['Poppins'] text-sm font-bold uppercase tracking-widest text-[#A3B5A6]">Nombre o Proyecto</label>
           <input type="text" id="nombre" name="nombre" required 
             class="w-full border-b border-[#373A36]/20 py-3 focus:border-[#A3B5A6] outline-none transition-colors font-['Lato']" 
             placeholder="Tu nombre o el de tu marca" />
+          <span class="error-msg absolute -bottom-6 left-0 hidden text-red-400 text-[10px] uppercase tracking-widest font-bold transition-opacity">
+            Por favor, ingresá tu nombre o el de tu proyecto.
+          </span>
         </div>
 
-        <div class="space-y-2">
+        <div class="relative flex flex-col">
           <label for="email" class="block font-['Poppins'] text-sm font-bold uppercase tracking-widest text-[#A3B5A6]">Email</label>
-          <input type="email" id="email" name="email" required 
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            required 
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             class="w-full border-b border-[#373A36]/20 py-3 focus:border-[#A3B5A6] outline-none transition-colors font-['Lato']" 
             placeholder="hola@tuproyecto.com" />
+          <span class="error-msg absolute -bottom-6 left-0 hidden text-red-400 text-[10px] uppercase tracking-widest font-bold transition-opacity">
+            Ingresá un correo válido (ej: nombre@dominio.com).
+          </span>
         </div>
 
-        <div class="space-y-2">
+        <div class="relative flex flex-col">
           <label for="momento" class="block font-['Poppins'] text-sm font-bold uppercase tracking-widest text-[#A3B5A6]">¿En qué momento está tu marca?</label>
-          <select id="momento" name="momento" 
+          <select id="momento" name="momento" required
             class="w-full border-b border-[#373A36]/20 py-3 bg-transparent focus:border-[#A3B5A6] outline-none transition-colors font-['Lato'] text-[#373A36]/70">
+            <option value="" disabled selected>Seleccioná una opción</option>
             <option value="inicio">Es un proyecto nuevo (Branding Esencial)</option>
             <option value="rediseño">Ya existe, pero necesita claridad (Auditoría)</option>
             <option value="crecimiento">Busco coherencia y gestión (Dirección Estratégica)</option>
-            <option value="otro">Todavía no estoy segura</option>
+            <option value="otro">Todavía no estoy seguro</option>
           </select>
+          <span class="error-msg absolute -bottom-6 left-0 hidden text-red-400 text-[10px] uppercase tracking-widest font-bold transition-opacity">
+            Por favor, seleccioná una de las opciones.
+          </span>
         </div>
 
-        <div class="space-y-2">
+        <div class="relative flex flex-col">
           <label for="mensaje" class="block font-['Poppins'] text-sm font-bold uppercase tracking-widest text-[#A3B5A6]">Tu mensaje</label>
           <textarea id="mensaje" name="mensaje" rows="4" required
             class="w-full border-b border-[#373A36]/20 py-3 focus:border-[#A3B5A6] outline-none transition-colors font-['Lato'] resize-none" 
             placeholder="Contanos lo que sientas necesario..."></textarea>
+          <span class="error-msg absolute -bottom-6 left-0 hidden text-red-400 text-[10px] uppercase tracking-widest font-bold transition-opacity">
+            El mensaje es necesario para entender tu necesidad.
+          </span>
         </div>
 
-        <div class="pt-6">
-          <button type="submit" 
-            class="w-full bg-[#373A36] text-white font-['Poppins'] font-bold py-4 rounded-full hover:bg-[#A3B5A6] transition-all duration-300 tracking-widest uppercase text-sm">
+        <div class="pt-4">
+          <button 
+            type="submit" 
+            id="submit-btn"
+            class="w-full bg-[#373A36] text-white font-['Poppins'] font-bold py-4 rounded-full hover:bg-[#A3B5A6] disabled:bg-gray-400 transition-all duration-300 tracking-widest uppercase text-sm"
+          >
             Enviar Mensaje
           </button>
         </div>
 
+        <div id="form-status" class="hidden mt-8 p-6 bg-[#A3B5A6]/10 border border-[#A3B5A6]/20 rounded-sm"></div>
+
       </form>
-
-      <div class="mt-12 text-center text-sm text-[#373A36]/50 font-['Lato']">
-        <p>También podés escribirnos directamente a <a href="mailto:hola@animadiseno.com" class="underline hover:text-[#A3B5A6]">hola@animadiseno.com</a></p>
-      </div>
-
     </div>
   </section>
-
 
   <Footer />
 </BaseLayout>
 
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const status = document.getElementById('form-status');
+  const btn = document.getElementById('submit-btn') as HTMLButtonElement;
 
+  if (form && status && btn) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Agregamos la clase al padre para activar el CSS de error
+      form.classList.add('submitted');
+      
+      if (!form.checkValidity()) {
+        const firstInvalid = form.querySelector(':invalid') as HTMLElement;
+        firstInvalid?.focus();
+        return;
+      }
 
+      btn.textContent = "Enviando...";
+      btn.disabled = true;
+      status.classList.add('hidden');
+      
+      const data = new FormData(form);
+      
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
 
+        if (response.ok) {
+          status.innerHTML = `
+              <p class="font-['Poppins'] font-bold text-[#373A36] mb-2 text-base">Mensaje recibido correctamente.</p>
+              <p class="font-['Lato'] italic text-[#373A36]/80 text-sm leading-relaxed">
+                Gracias por compartir un poco de tu proyecto. Me voy a tomar el tiempo de leerlo con atención para entender la esencia de lo que necesitás y me pondré en contacto con vos en cuanto pueda darte una respuesta con criterio.
+              </p>
+          `;
+          status.classList.remove('hidden');
+          form.reset();
+          form.classList.remove('submitted');
+          btn.textContent = "Mensaje Enviado";
+
+          setTimeout(() => {
+            status.classList.add('hidden');
+            btn.textContent = "Enviar Mensaje";
+            btn.disabled = false;
+          }, 10000);
+        } else {
+          throw new Error();
+        }
+      } catch (error) {
+        status.innerHTML = `<p class="text-red-400 text-[10px] uppercase font-bold text-center italic">Hubo un problema. Por favor, revisá los campos e intentá nuevamente.</p>`;
+        status.classList.remove('hidden');
+        btn.textContent = "Enviar Mensaje";
+        btn.disabled = false;
+      }
+    });
+  }
+</script>
