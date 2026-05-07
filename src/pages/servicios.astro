@@ -4,12 +4,206 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 ---
 
-<BaseLayout title="Servicios">
+<BaseLayout 
+  title="Servicios — Ánima"
+  description="Auditoría de marca, mentoría, branding y gestión estratégica para profesionales del bienestar."
+>
   <Navbar />
 
-  <main class="py-20 text-center">
-    <h1 class="text-3xl font-semibold">Servicios</h1>
-  </main>
+  <section class="pt-32 pb-20 px-6 bg-[#E9E2D0]/20 text-center">
+    <div class="max-w-3xl mx-auto" data-aos="fade-up">
+      <h1 class="font-['Poppins'] text-4xl md:text-5xl font-bold text-[#373A36] mb-6">
+        Servicios diseñados según el momento de tu marca.
+      </h1>
+      <p class="font-['Lato'] text-lg text-[#373A36]/70 leading-relaxed">
+        Cada servicio de Ánima resuelve lo que el siguiente requiere como condición. El punto de entrada correcto depende de dónde estás hoy.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 px-6 bg-white border-y border-[#A3B5A6]/10 text-center">
+    <div class="max-w-2xl mx-auto" data-aos="fade-up">
+      <h2 class="font-['Poppins'] text-2xl font-bold text-[#373A36] mb-4">¿En qué momento está tu marca?</h2>
+      <p class="font-['Lato'] text-[#373A36]/80 mb-8">
+        Algunas marcas necesitan claridad antes de construir. Otras necesitan construir desde cero o crecer con coherencia.
+      </p>
+      <a href="#servicios-list" class="text-[#91A8D0] font-['Poppins'] font-bold text-xs uppercase tracking-widest hover:opacity-70 transition-opacity">
+        Explorar el sistema de servicios ↓
+      </a>
+    </div>
+  </section>
+
+  <div id="servicios-list">
+    
+    <section id="auditoria-de-marca" class="py-24 px-6 bg-[#E9E2D0]/10">
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-start" data-aos="fade-up">
+        <div>
+          <h3 class="font-['Poppins'] text-2xl font-semibold text-[#373A36] mb-2">Auditoría de Marca y Diagnóstico</h3>
+          <p class="font-['Lato'] italic text-[#A3B5A6] mb-6">Para quienes necesitan claridad antes de invertir en cambios.</p>
+          <p class="font-['Lato'] text-[#373A36]/80 mb-6">Analizamos el estado real de tu marca: identidad visual, discurso y presencia digital para crear una hoja de ruta estratégica.</p>
+          <div class="text-[11px] font-['Lato'] font-bold text-[#373A36]/50 uppercase tracking-tighter space-y-1">
+            <p>Inversión: desde USD 250</p>
+            <p>Duración: 2 semanas · Online</p>
+          </div>
+        </div>
+        <div class="bg-white p-8 border border-[#A3B5A6]/10">
+          <h4 class="font-['Poppins'] text-[10px] font-bold uppercase tracking-[0.2em] text-[#A3B5A6] mb-4">Qué incluye</h4>
+          <ul class="font-['Lato'] text-sm space-y-2 text-[#373A36]/70">
+            <li>· Análisis visual y de discurso</li>
+            <li>· Revisión de presencia digital</li>
+            <li>· Informe estratégico con recomendaciones</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="mentoria-estrategica" class="py-24 px-6 bg-white">
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-start" data-aos="fade-up">
+        <div class="md:order-2">
+          <h3 class="font-['Poppins'] text-2xl font-semibold text-[#373A36] mb-2">Mentoría Estratégica 1:1</h3>
+          <p class="font-['Lato'] italic text-[#A3B5A6] mb-6">Dirección antes de comprometerse con un proceso largo.</p>
+          <p class="font-['Lato'] text-[#373A36]/80 mb-6">Espacio individual para ordenar el pensamiento estratégico. Útil cuando tenés claridad en lo que hacés pero no en cómo comunicarlo.</p>
+          <div class="text-[11px] font-['Lato'] font-bold text-[#373A36]/50 uppercase tracking-tighter">
+            <p>Desde USD 120 por sesión</p>
+          </div>
+        </div>
+        <div class="md:order-1 bg-[#F9F8F6] p-8 border border-[#A3B5A6]/10">
+          <h4 class="font-['Poppins'] text-[10px] font-bold uppercase tracking-[0.2em] text-[#A3B5A6] mb-4">Qué incluye</h4>
+          <ul class="font-['Lato'] text-sm space-y-2 text-[#373A36]/70">
+            <li>· Sesión individual de 90 min</li>
+            <li>· Definición de prioridades</li>
+            <li>· Plan de acción concreto (30-60 días)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="branding-esencial" class="py-24 px-6 bg-[#E9E2D0]/10">
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-start" data-aos="fade-up">
+        <div>
+          <h3 class="font-['Poppins'] text-2xl font-semibold text-[#373A36] mb-2">Branding Esencial</h3>
+          <p class="font-['Lato'] italic text-[#A3B5A6] mb-6">Para marcas en etapa inicial o redefinición profunda.</p>
+          <p class="font-['Lato'] text-[#373A36]/80 mb-6">Proceso de construir los cimientos estratégicos y visuales desde el propósito hasta el sistema visual base.</p>
+          <div class="text-[11px] font-['Lato'] font-bold text-[#373A36]/50 uppercase tracking-tighter">
+            <p>Desde USD 800 · 4 a 6 semanas</p>
+          </div>
+        </div>
+        <div class="bg-white p-8 border border-[#A3B5A6]/10 relative overflow-hidden">
+          <div class="absolute top-0 right-0 w-16 h-1 bg-[#D69F7E]/20"></div>
+          <h4 class="font-['Poppins'] text-[10px] font-bold uppercase tracking-[0.2em] text-[#A3B5A6] mb-4">Qué incluye</h4>
+          <ul class="font-['Lato'] text-sm space-y-2 text-[#373A36]/70">
+            <li>· Definición de propósito y valor</li>
+            <li>· Logotipo e isotipo estratégico</li>
+            <li>· Sistema tipográfico y paleta</li>
+            <li>· Manual base de marca</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="branding-integral" class="py-24 px-6 bg-white">
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-start" data-aos="fade-up">
+        <div class="md:order-2">
+          <h3 class="font-['Poppins'] text-2xl font-semibold text-[#373A36] mb-2">Branding Integral</h3>
+          <p class="font-['Lato'] italic text-[#A3B5A6] mb-6">Sistema completo y escalable para marcas en crecimiento.</p>
+          <p class="font-['Lato'] text-[#373A36]/80 mb-6">Expande el trabajo esencial hacia un sistema gráfico en múltiples niveles, plantillas y guía de comunicación integral.</p>
+          <div class="text-[11px] font-['Lato'] font-bold text-[#373A36]/50 uppercase tracking-tighter">
+            <p>Desde USD 1.800 · 6 a 8 semanas</p>
+          </div>
+        </div>
+        <div class="md:order-1 bg-[#F9F8F6] p-8 border border-[#A3B5A6]/10">
+          <h4 class="font-['Poppins'] text-[10px] font-bold uppercase tracking-[0.2em] text-[#A3B5A6] mb-4">Qué incluye</h4>
+          <ul class="font-['Lato'] text-sm space-y-2 text-[#373A36]/70">
+            <li>· Todo lo del Branding Esencial</li>
+            <li>· Diseño de aplicaciones y plantillas</li>
+            <li>· Guía estratégica de comunicación visual</li>
+            <li>· Microcopy base alineado</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="direccion-estrategica" class="py-24 px-6 bg-[#E9E2D0]/10">
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-start" data-aos="fade-up">
+        <div>
+          <h3 class="font-['Poppins'] text-2xl font-semibold text-[#373A36] mb-2">Dirección Estratégica de Comunicación</h3>
+          <p class="font-['Lato'] italic text-[#A3B5A6] mb-6">Para marcas que necesitan sostener su identidad.</p>
+          <p class="font-['Lato'] text-[#373A36]/80 mb-4">Arquitectura editorial mensual con supervisión estratégica. La coherencia no se sostiene sin una base previa.</p>
+          <p class="text-[10px] text-[#D69F7E] font-bold uppercase tracking-widest mb-6">Condición: Requiere identidad definida.</p>
+          <div class="text-[11px] font-['Lato'] font-bold text-[#373A36]/50 uppercase tracking-tighter">
+            <p>Desde USD 600 mensuales</p>
+          </div>
+        </div>
+        <div class="bg-white p-8 border border-[#A3B5A6]/10">
+          <h4 class="font-['Poppins'] text-[10px] font-bold uppercase tracking-[0.2em] text-[#A3B5A6] mb-4">Qué incluye</h4>
+          <ul class="font-['Lato'] text-sm space-y-2 text-[#373A36]/70">
+            <li>· Estrategia de contenidos mensual</li>
+            <li>· Calendario editorial y pilares</li>
+            <li>· Supervisión visual y narrativa</li>
+            <li>· Informe de coherencia mensual</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="gestion-redes" class="py-24 px-6 bg-white">
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-start" data-aos="fade-up">
+        <div class="md:order-2">
+          <h3 class="font-['Poppins'] text-2xl font-semibold text-[#373A36] mb-2">Gestión y Estrategia de Redes</h3>
+          <p class="font-['Lato'] italic text-[#A3B5A6] mb-6">Presencia digital continua, coherente y respetuosa.</p>
+          <p class="font-['Lato'] text-[#373A36]/80 mb-6">Traducción de identidad en redes sociales. Disponible exclusivamente para marcas con base estratégica definida.</p>
+          <div class="text-[11px] font-['Lato'] font-bold text-[#373A36]/50 uppercase tracking-tighter">
+            <p>Desde USD 400 mensuales</p>
+          </div>
+        </div>
+        <div class="md:order-1 bg-[#F9F8F6] p-8 border border-[#A3B5A6]/10">
+          <h4 class="font-['Poppins'] text-[10px] font-bold uppercase tracking-[0.2em] text-[#A3B5A6] mb-4">Qué incluye</h4>
+          <ul class="font-['Lato'] text-sm space-y-2 text-[#373A36]/70">
+            <li>· Calendario y diseño de piezas</li>
+            <li>· Redacción según guía de tono</li>
+            <li>· Programación y publicación</li>
+            <li>· Reporte mensual de desempeño</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="diseno-piezas" class="py-24 px-6 bg-[#E9E2D0]/10 border-b border-[#A3B5A6]/10">
+      <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+        <h3 class="font-['Poppins'] text-2xl font-semibold text-[#373A36] mb-2">Diseño de Piezas y Aplicaciones</h3>
+        <p class="font-['Lato'] italic text-[#A3B5A6] mb-10 max-w-lg mx-auto">Materializar el sistema en aplicaciones concretas: ebooks, presentaciones y web.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+          <div class="bg-white p-6 border border-[#A3B5A6]/10">
+            <p class="text-[10px] font-bold text-[#91A8D0] uppercase mb-2">Inversión</p>
+            <p class="font-['Lato'] text-sm text-[#373A36]">Desde USD 80 por pieza.</p>
+          </div>
+          <div class="md:col-span-2 bg-white p-6 border border-[#A3B5A6]/10">
+            <p class="text-[10px] font-bold text-[#91A8D0] uppercase mb-2">Uso</p>
+            <p class="font-['Lato'] text-sm text-[#373A36]">Servicio transversal para clientes con sistema de identidad ya establecido.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<section class="py-24 px-6 bg-[#A3B5A6] text-[#373A36]">
+    <div class="max-w-2xl mx-auto text-center" data-aos="fade-up">
+      <h2 class="font-['Poppins'] text-3xl font-bold mb-6">
+        ¿No sabés por dónde empezar?
+      </h2>
+      <p class="font-['Lato'] mb-10 text-[#373A36]/80 leading-relaxed">
+        No hace falta tenerlo todo claro antes de contactarte. Una conversación honesta sobre tu proyecto es suficiente para encontrar juntos el camino.
+      </p>
+      
+      <a href="/contacto" class="group inline-flex items-center gap-3 font-['Poppins'] font-bold uppercase text-sm tracking-[0.2em] hover:opacity-70 transition-all">
+        Iniciar conversación
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
 
   <Footer />
 </BaseLayout>
