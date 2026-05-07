@@ -1,58 +1,75 @@
----
----
-
-<header class="fixed top-0 left-0 w-full bg-[#E9E2D0]/80 backdrop-blur-md z-50">
-
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-
+<header
+  class="fixed top-0 left-0 w-full bg-[#F5F1E8]/85 backdrop-blur-sm border-b border-black/5 z-50"
+>
+  <div
+    class="max-w-7xl mx-auto px-6 md:px-10 py-5 flex justify-between items-center"
+  >
     <!-- Logo -->
-    <a href="/" class="font-[Poppins] text-[18px] tracking-wide">
-      Ánima
+    <a href="/" class="flex items-center">
+      <img
+        src="/images/logos/logo-principal.svg"
+        alt="Ánima Diseño & Comunicación"
+        class="h-12 md:h-14 w-auto"
+      />
     </a>
 
     <!-- Desktop nav -->
-    <nav class="hidden md:flex gap-8 text-sm font-[Lato]">
-      <a href="/" class="hover:opacity-70 transition">Inicio</a>
-      <a href="/sobre-anima" class="hover:opacity-70 transition">Sobre</a>
-      <a href="/proceso" class="hover:opacity-70 transition">Proceso</a>
-      <a href="/servicios" class="hover:opacity-70 transition">Servicios</a>
-      <a href="/contacto" class="hover:opacity-70 transition font-medium">
+    <nav
+      class="hidden md:flex items-center gap-10 text-[13px] tracking-[0.08em] font-[Lato] text-[#373A36]/75 uppercase"
+    >
+      <a href="/" class="hover:opacity-50 transition duration-300"> Inicio </a>
+
+      <a href="/sobre-anima" class="hover:opacity-50 transition duration-300">
+        Sobre
+      </a>
+
+      <a href="/proceso" class="hover:opacity-50 transition duration-300">
+        Proceso
+      </a>
+
+      <a href="/servicios" class="hover:opacity-50 transition duration-300">
+        Servicios
+      </a>
+
+      <a href="/contacto" class="hover:opacity-50 transition duration-300">
         Contacto
       </a>
     </nav>
 
     <!-- Mobile button -->
     <button id="menu-btn" class="md:hidden" aria-label="Abrir menú">
-      <div class="space-y-1">
-        <span class="block w-5 h-[1px] bg-[#373A36]"></span>
+      <div class="space-y-[5px]">
         <span class="block w-5 h-[1px] bg-[#373A36]"></span>
         <span class="block w-5 h-[1px] bg-[#373A36]"></span>
       </div>
     </button>
-
   </div>
 
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden flex flex-col items-center gap-6 pb-6 text-sm font-[Lato]">
-
-    <a href="/" class="hover:opacity-70 transition">Inicio</a>
-    <a href="/sobre-anima" class="hover:opacity-70 transition">Sobre</a>
-    <a href="/proceso" class="hover:opacity-70 transition">Proceso</a>
-    <a href="/servicios" class="hover:opacity-70 transition">Servicios</a>
-    <a href="/contacto" class="hover:opacity-70 transition">Contacto</a>
-
+  <div
+    id="mobile-menu"
+    class="hidden border-t border-black/5 bg-[#F5F1E8] md:hidden"
+  >
+    <nav
+      class="flex flex-col items-center gap-6 py-8 text-sm uppercase tracking-[0.08em] font-[Lato] text-[#373A36]/80"
+    >
+      <a href="/">Inicio</a>
+      <a href="/sobre-anima">Sobre</a>
+      <a href="/proceso">Proceso</a>
+      <a href="/servicios">Servicios</a>
+      <a href="/contacto">Contacto</a>
+    </nav>
   </div>
-
 </header>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('mobile-menu');
+  document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("menu-btn");
+    const menu = document.getElementById("mobile-menu");
 
     if (btn && menu) {
-      btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
       });
     }
   });
