@@ -13,7 +13,7 @@ const {
 } = Astro.props;
 ---
 
-<html lang="es" class="scroll-smooth">
+<html lang="es" class="scroll-smooth overflow-x-hidden">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,8 +29,7 @@ const {
     <title>{title}</title>
   </head>
 
-  <body class="bg-[#E9E2D0] text-[#373A36] font-['Lato'] antialiased selection:bg-[#91A8D0] selection:text-white">
-
+  <body class="bg-[#E9E2D0] text-[#373A36] font-['Lato'] antialiased selection:bg-[#91A8D0] selection:text-white overflow-x-hidden"></body>
     <slot />
 
     <!-- AOS: Animaciones sutiles para reforzar la fluidez -->
